@@ -1,6 +1,1 @@
-/**
- * @param {string} str
- */
-function hello(str) {
-    return str;
-}
+angular.module('custodocarro', ["firebase", "highcharts-ng"]);
