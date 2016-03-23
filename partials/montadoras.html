@@ -1,4 +1,5 @@
-<ul>
+<!--
+<ul ng-controller="MontadorasController as MontadoraCtrl">
     <li>
         <span 
             ng-click="MontadoraCtrl.novaMontadora = true"
@@ -6,12 +7,24 @@
             Adicionar montadora
         </span>
         <div ng-show="MontadoraCtrl.novaMontadora">
-            <input type="text" ng-model="MontadoraCtrl.nova">
+            <input type="text" ng-model="MontadoraCtrl.nova.nome">
             <button type="button" ng-click="MontadoraCtrl.addNova()">OK</button>
             <button type="button" ng-click="MontadoraCtrl.cancelNova()">Cancel</button>
         </div>
     </li>
-    <li ng-repeat="montadora in montadoras">
-        <div montadora={{montadora}}></div>
+    <li ng-repeat="montadora in MontadoraCtrl.montadoras">
+        {{montadora.nome}}
     </li>
 </ul>
+-->
+
+<select ng-controller="MontadorasController as MontadoraCtrl"
+    ng-change="MontadoraCtrl.checkValue($event)" 
+    ng-model="MontadoraCtrl.montadora">
+    <option 
+        ng-repeat="montadora in MontadoraCtrl.montadoras"
+        ng-value="MontadoraCtrl.$id">
+        {{montadora.nome}}
+    </option>
+    <option value="0"></option>
+</select>

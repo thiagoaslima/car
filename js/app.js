@@ -1,8 +1,10 @@
-var app = angular.module("custodocarro", [
+var app = angular.module("carapp", [
+    "ui.router",
     "firebase",
-    "highcharts-ng",
-    "ui.router"
+    "ngHighcharts"
 ]);
+
+console.log(app);
 
 app.config(["$stateProvider", "$urlRouterProvider", 
     function ($stateProvider, $urlRouterProvider) {
@@ -10,6 +12,15 @@ app.config(["$stateProvider", "$urlRouterProvider",
      $urlRouterProvider.otherwise("/");
      
      $stateProvider
+     
+        .state('home', {
+            url: '/',
+            views: {
+                'montadoras': {
+                    templateUrl: "partials/formulario.html"
+                }
+            }
+        })
         
         .state('novo', {
             url: "/novo",
