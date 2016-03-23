@@ -1,0 +1,7 @@
+{
+    "combustivel": {
+        "álcool": true,
+        "gasolina": true,
+        "gnv": true
+    }
+}

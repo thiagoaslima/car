@@ -1,0 +1,17 @@
+<ul>
+    <li>
+        <span 
+            ng-click="MontadoraCtrl.novaMontadora = true"
+            ng-hide="MontadoraCtrl.novaMontadora">
+            Adicionar montadora
+        </span>
+        <div ng-show="MontadoraCtrl.novaMontadora">
+            <input type="text" ng-model="MontadoraCtrl.nova">
+            <button type="button" ng-click="MontadoraCtrl.addNova()">OK</button>
+            <button type="button" ng-click="MontadoraCtrl.cancelNova()">Cancel</button>
+        </div>
+    </li>
+    <li ng-repeat="montadora in montadoras">
+        <div montadora={{montadora}}></div>
+    </li>
+</ul>

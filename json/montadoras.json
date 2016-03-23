@@ -1,0 +1,11 @@
+{
+    "montadoras": {
+        "Chevrolet": true,
+        "Fiat": true,
+        "Ford": true,
+        "Honda": true,
+        "Nissan": true,
+        "Renault": true,
+        "Volkswagen": true
+    }
+}
